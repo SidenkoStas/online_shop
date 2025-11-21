@@ -6,28 +6,24 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>{% block title %}Online Shop{% endblock %}</title>
 
-  <!-- Example stylesheet; create static/css/styles.css if needed -->
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
-
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="/">Home</a>
-    </nav>
-  </header>
+  <div id="header">
+    <a href="/" class="logo">My shop</a>
+  </div>
+  <div id="subheader">
+    <div class="card">
+      Твоя карта пуста
+    </div>
+  </div>
 
-  <main>
+  <div id="content">
     {% block content %}
     <!-- Page content goes here -->
     {% endblock %}
-  </main>
-
-  <footer>
-    <p>&copy; {{ now|default:None }} Online Shop</p>
-  </footer>
-
+  </div>
   {% comment %} <script src="{% static 'js/main.js' %}"></script> {% endcomment %}
-  {% block extra_js %}{% endblock %}
+  {% comment %} {% block extra_js %}{% endblock %} {% endcomment %}
 </body>
 </html>
