@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Мои приложения
     "shop.apps.ShopConfig",
+    "cart.apps.CartConfig",
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,7 @@ JAZZMIN_UI_TWEAKS = {
     "theme": "darkly", "dark_mode_theme": "slate", 
     "sidebar_nav_compact_style": True, "navbar": "navbar-info navbar-dark",
     }
+
+# Сессии
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+CART_SESSION_ID = 'cart'
