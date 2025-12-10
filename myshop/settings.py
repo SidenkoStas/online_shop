@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     # Мои приложения
     "shop.apps.ShopConfig",
     "cart.apps.CartConfig",
+    "orders.app.OrdersConfig",
 ]
 
 MIDDLEWARE = [
