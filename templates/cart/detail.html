@@ -27,7 +27,14 @@
             </a>
           </td>
           <td>{{ product.name }}</td>
-          <td>{{ item.quantity }}</td>
+          <td>
+            <form action="{% url "cart:cart_add" product.id %}" method="post">
+              {{ item.update_quantity_form.quantity }}
+              {{ item.update_quantity_form.override }}
+              {% csrf_token %}
+              <input type="submit" value="Обновить">
+            </form>
+          </td>
           <td>
             <form action="{% url "cart:cart_remove" product.id %}" method="post">
               <input type="submit" value="Remove">
@@ -35,7 +42,7 @@
             </form>
           </td>
           <td>{{ item.price }}</td>
-          <td>{{ item.total_prict }}</td>
+          <td>{{ item.total_price }}</td>
         </tr >
       {% endwith %}
     {% endfor %}
