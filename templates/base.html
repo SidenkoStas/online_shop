@@ -21,7 +21,7 @@
             {{ total_items }} шт.
             ${{ cart.get_total_price }}
           </a>
-        {% else %}
+        {% elif not order %}
           Корзина пуста
         {% endif %}
       {% endwith %}
