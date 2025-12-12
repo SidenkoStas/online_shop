@@ -128,3 +128,5 @@ JAZZMIN_UI_TWEAKS = {
 # Сессии
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 CART_SESSION_ID = 'cart'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
